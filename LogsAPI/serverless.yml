@@ -1,0 +1,64 @@
+service: budget-0923
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+      Resource: "*"
+
+functions:
+  postSubmission:
+    handler: api/post.submit
+    memorySize: 256
+    description: Submit post information
+    events:
+      - http: 
+          path: post
+          method: post
+          cors: true
+  getAll:
+    handler: api/scan.list
+    memorySize: 256
+    description: List all items
+    events:
+      - http: 
+          path: scan
+          method: get
+          cors: true
+  get:
+    handler: api/get.list
+    memorySize: 256
+    description: List all items
+    events:
+      - http: 
+          path: get/{type}
+          method: get  
+          cors: true
+
+resources:
+  Resources:
+    UsersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: budget
+        AttributeDefinitions:
+          - AttributeName: type
+            AttributeType: S
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: type
+            KeyType: HASH
+          - AttributeName: id
+            KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST
