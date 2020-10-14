@@ -24,13 +24,9 @@ This is a React application (designed for mobile devices) that allows client acc
 
 **Screenshots:**
 1) Landing page for application.
-![IMG_0951](https://user-images.githubusercontent.com/42954670/95929985-fb6ffb00-0d8a-11eb-8d3a-10c2ccf87207.PNG)
-
 2) New expense entry.
-![IMG_0952](https://user-images.githubusercontent.com/42954670/95930004-0591f980-0d8b-11eb-9ff8-50ad13cd1a32.PNG)
-
 3) Expense logs.
-![IMG_0954](https://user-images.githubusercontent.com/42954670/95930017-10e52500-0d8b-11eb-8435-71086369c9cd.PNG)
+![image](https://user-images.githubusercontent.com/42954670/95930158-6de0db00-0d8b-11eb-89bf-1fe529e7c055.png)
 
 4) Sample Google Sheets layout.
 ![image](https://user-images.githubusercontent.com/42954670/95929591-ff4f4d80-0d89-11eb-9807-62e47e5dd867.png)
