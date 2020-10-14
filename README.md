@@ -24,8 +24,8 @@ This is a React application (designed for mobile devices) that allows client acc
 
 **Screenshots:**
 1) Landing page for application.
-2) New expense entry.
-3) Expense logs.
+2) Expense logs.
+3) New expense entry.
 ![image](https://user-images.githubusercontent.com/42954670/95930158-6de0db00-0d8b-11eb-89bf-1fe529e7c055.png)
 
 4) Sample Google Sheets layout.
